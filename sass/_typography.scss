@@ -1,0 +1,121 @@
+$text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+
+@font-face {
+	font-family:'Icons';
+	src:url('../assets/fonts/icons/icons.eot');
+	src:url('../assets/fonts/icons/icons.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/icons/icons.svg#icons') format('svg'),
+		url('../assets/fonts/icons/icons.woff') format('woff'),
+		url('../assets/fonts/icons/icons.ttf') format('truetype');
+	font-weight:400;
+	font-style:normal;
+}
+
+
+@font-face {
+	font-family:'linecons';
+	src:url('../assets/fonts/linecons/linecons.eot');
+	src:url('../assets/fonts/linecons/linecons.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/linecons/linecons.svg#icons') format('svg'),
+		url('../assets/fonts/linecons/linecons.woff') format('woff'),
+		url('../assets/fonts/linecons/linecons.ttf') format('truetype');
+	font-weight:400;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'WebSymbolsRegular';
+	src:url('../assets/fonts/WebSymbols/websymbols-regular-webfont.eot');
+	src:url('../assets/fonts/WebSymbols/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/WebSymbols/websymbols-regular-webfont.woff') format('woff'),
+		url('../assets/fonts/WebSymbols/websymbols-regular-webfont.ttf') format('truetype'),
+		url('../assets/fonts/WebSymbols/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+	font-weight:400;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'Socialico';
+	src:url('../assets/fonts/social-glyph/socialglyphs-regular.eot');
+	src:url('../assets/fonts/social-glyph/socialglyphs-regularotf');
+	src:url('../assets/fonts/social-glyph/socialglyphs-regular.eot?#iefix') format('embedded-opentype'),
+	url('../assets/fonts/social-glyph/socialglyphs-regular.woff') format('woff'),
+	url('../assets/fonts/social-glyph/socialglyphs-regular.ttf') format('truetype'),
+	url('../assets/fonts/social-glyph/socialglyphs-regular.svg#SocialicoRegular') format("svg");
+	font-weight:400;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'RalewayThin';
+	src:url('../assets/fonts/Raleway/raleway_thin.eot');
+	src:url('../assets/fonts/Raleway/raleway_thin.otf');
+	src:url('../assets/fonts/Raleway/raleway_thin.eot?#iefix') format('embedded-opentype'),
+	url('../assets/fonts/Raleway/raleway_thin.woff') format('woff'),
+	url('../assets/fonts/Raleway/raleway_thin.ttf') format('truetype'),
+	url('../assets/fonts/Raleway/raleway_thin.svg#RalewayThin') format("svg");
+	font-weight:100;
+	font-style:cursive;
+}
+
+a {
+	text-decoration: none;
+}
+
+html, body {
+	font: 200 1.1em/1.3em 'Open Sans', 'Helvetica Neue', Helvetica, arial, sans-serif;
+}
+
+#{headings(all)}{
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, arial, sans-serif;
+	font-weight: 200;
+	color: $dark-accent;
+}
+
+h2 {
+	font-size: 2em;
+	line-height: 2.1em;
+}
+
+.center-text {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.social-icon {
+	font-family: "Socialico";
+	font-size: 4em;
+}
+
+.linecon {
+	font-family: 'linecons';
+	line-height: 2em;
+}
+
+.web-symbol {
+	font-family: 'WebSymbolsRegular';
+	font-size: 2em;
+}
+
+.thin {
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+	text-transform: uppercase;
+}
+
+.fat {
+	font-family: 'Lobster', cursive;
+}
+
+.hand {
+	font-family: 'Petit Formal Script', cursive;
+	font-size: 3.4em;
+	vertical-align: middle;
+}

@@ -1,0 +1,348 @@
+// This import applies a global reset to any page that imports this stylesheet.
+@import "blueprint/reset";
+// To configure blueprint, edit the partials/base.sass file.
+@import "partials/base";
+// Import all the default blueprint modules so that we can access their mixins.
+@import "blueprint";
+// Import the non-default scaffolding module.
+@import "blueprint/scaffolding";
+@import "blueprint/grid";
+
+$base-color: #fff;
+$main-color: #222;
+$accent-color: #3498DB;
+$second-accent: #1ABC9C;
+$dark-accent: #34495E;
+$purple-accent: #9B59B6;
+$cloud-color: #ecf0f1;
+$facebook-color: #3b5998;
+$twitter-color: #00a0d1;
+$rss-color: #fa9b39;
+$pinterest-color: #910101;
+$soundcloud-color: #F78F10;
+$linkedin-color: #069;
+$dark-field: #6285A8;
+
+img {
+	max-width: 100%;
+}
+
+.img {
+	padding: 10px;
+}
+
+.left {
+	float: left !important;
+}
+
+.right {
+	float: right !important;
+}
+
+.first {
+	margin-left: 0 !important;
+}
+
+.last {
+	margin-right: 0 !important;
+}
+
+.half-h, .half-h-bottom {
+	position: absolute;
+	height: 50%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.half-h-bottom {
+	top: 50%;
+}
+.wrapper {
+	position: relative;
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+header {
+	@include container;
+	@include column(24);
+	max-width: 100%;
+	margin: 40px 0 60px 0;
+	overflow: visible;
+}
+
+.menu {
+	padding: 60px 0;
+	p {
+		position: relative;
+		display: inline-block;
+		width: 30%;
+		margin: 0 1.5%;
+		padding: 5px;
+		font-size: 20px;
+		line-height: 26px;
+		text-transform: uppercase;
+		box-sizing: border-box;
+		-webkit-transition: all .5s ease-in-out;
+		
+		&:before, &:after {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background: $accent-color;
+			content: '';
+			-webkit-transition: all 0.3s ease-in-out;
+		}
+		
+		&:before {
+			opacity: 0;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			-webkit-transition: all 0.5s ease-in-out;
+		}
+
+		&:hover {
+			&:before {
+				opacity: 1;
+			}
+			a {
+				-webkit-transition: all 0.3s ease-in-out;
+				color: #3498DB;
+				cursor: pointer;	
+			}
+		}
+	}
+}
+
+.left-menu {
+	@include column(9);
+	
+	p {
+		float: left;
+		text-align: left;
+	}
+}
+
+.right-menu {
+	@include column(9, true);
+	
+	p {
+		float: right;
+		text-align: right;
+	}
+}
+
+.page-logo {
+	position: relative;
+	@include column(6);
+	text-align: center;
+	height: auto;
+	
+	h2 {
+		font-size: 1.4em;
+		text-transform: uppercase;
+	}
+	
+	h4 {
+		font-size: 1em;
+		color: $dark-accent;
+		font-weight: bold;
+		position: absolute;
+		bottom: -25px;
+	}
+	
+	
+	.name-desc-left {
+		left: -60px;
+	}
+	
+	.name-desc-right {
+	
+		right: -40px;
+	}
+}
+
+.logo-and {
+	position: absolute;
+	left: 40%;
+	bottom: -30px;
+}
+
+
+.full-heading {
+	background: $accent-color;
+}
+
+/****************************************
+************** Footer *******************
+*****************************************/
+
+footer {
+	background: $dark-accent;
+	position: relative;
+	float: left;
+	padding: 20px 0;
+	width: 100%;
+
+	text-align: center;
+	border-top: solid 4px $accent-color;
+	color: $base-color;
+	
+	h2 {
+		margin-bottom: 10px;
+		color: $base-color;
+	}
+	
+}
+
+
+.social-link {
+	background: $accent-color;
+	height: 140px;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease-in-out;
+	
+	&:hover {
+		opacity: .8;	
+	}
+}
+
+.social-link:nth-child(even) {
+	background: #F39C12;
+}
+
+.social-link.facebook {
+	background: $facebook-color;
+}
+
+.social-link.twitter {
+	background: $twitter-color;
+}
+
+.social-link.linkedin {
+	background: $linkedin-color;
+}
+
+.social-link.soundcloud {
+	background: $soundcloud-color;
+}
+
+.social-link.pinterest {
+	background: $pinterest-color;
+}
+
+.social-link.rss {
+	background: $rss-color;
+}
+
+.footer-social {
+	@include column(8);
+	padding: 0 10px 0 0;
+	box-sizing: border-box;
+	.social-link {
+		position: relative;
+		float: left;
+		width: 50%;
+		line-height: 140px;
+		list-style: none;
+	}
+}
+
+.footer-contact {
+
+	@include column(16, true);
+	box-sizing: border-box;
+	padding: 0 0 0 10px;
+
+	form {
+		height: 420px;
+		
+		input, textarea {
+			position: relative;
+			float: left;
+			width: 100%;
+			border: none;
+			height: 48px;
+			margin-bottom: 10px;
+			box-sizing: border-box;
+			background: lighten($dark-accent, 10%);
+			-webkit-appearance: none;
+			outline: none;
+			font-size: 1.2em;
+			color: $base-color;
+			-webkit-transition: all 0.5s ease-in-out;
+			text-indent: 10px;
+			&:focus {
+				background: lighten($dark-accent, 15%);
+			}
+		}
+		
+		textarea {
+			padding: 10px;
+			text-indent: 0;
+			line-height: 1em;
+			text-transform: none;
+			text-shadow: none;
+			height: 245px;
+			resize: none;
+		}
+		
+		input[type=submit] {
+			height: 50px;
+			background: $second-accent;
+			-webkit-transition: all 0.2s ease-in-out;
+			&:hover {
+				background: lighten($second-accent, 10%);
+			}
+			&:active {
+				background: darken($second-accent, 20%);
+			}
+		}
+		
+		#message-validation {
+			display: none;
+		}
+	}
+}
+
+.copyright {
+	position: relative;
+	width: 100%;
+	float: left;
+	margin: 20px 0;
+	
+	h3 {
+		color: $base-color;
+	}
+}
+
+.up-link {
+	position: fixed;
+	bottom: -60px;
+	right: 15px;
+	width: 80px;
+	height: 60px;
+	background: rgba(0,0,0,.6);
+	text-align: center;
+	color: $base-color;
+	padding: 10px 5px 0 5px;
+	box-sizing: border-box;
+	font-size: 1em;
+	opacity: 0;
+	z-index: 3;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+	cursor: pointer;
+}
+
+.up-link:hover, .up-link:active {
+	background: $accent-color;
+}

@@ -1,0 +1,152 @@
+@import 'main';
+@import 'typography';
+@import 'blog';
+@import 'portfolio';
+@import 'kontakt';
+
+.main-hero {
+	height: 490px;
+	box-sizing: border-box;
+	position: relative;
+	float: left;
+	margin: 0;
+	padding: 0;
+	h1, h3 {
+		display: none;
+		position: absolute;
+		top: 110px;
+		width: 100%;
+		text-align: center;
+		padding: 10px;
+		font-size: 5em;
+		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+	}
+	
+	h3 {
+		font-size: 2.4em;
+		font-weight: 200;
+		top: 220px;
+		color: #ECF0F1;
+	}
+	
+	img {
+		max-width: 100%;
+	}
+}
+
+
+.about-me {
+	position: relative;
+	float: left;
+	width: 100%;
+	padding: 40px 10px;
+	background: $accent-color;
+	color: $base-color;
+	box-sizing: border-box;
+	
+	a {
+		color: $dark-accent;
+		text-decoration: none;
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	
+	p {
+		text-align: justify;
+		font-size: 1.2em;
+		line-height: 1.5em;
+	}
+}
+
+
+.services {
+	position: relative;
+	float: left;
+	width: 100%;
+	padding: 80px 0 100px 0;
+	background: $dark-accent;
+	
+	h2, h3 {
+		color: #fff;
+		padding: 10px 0;
+	}
+	
+	.service-container {
+		@include column(8);		
+		text-align: center;
+		display: inline-block;
+		-webkit-transition: all .2s ease-in-out;
+		-moz-transition: all .2s ease-in-out;
+		-o-transition: all .2s ease-in-out;
+		transition: all .2s ease-in-out;
+		cursor: pointer;
+		
+		.service-desc {
+			padding-top: 15px;
+		}
+		
+		p {
+			width: 90%;
+			margin: 0 5%;
+			color: #fff;
+			box-sizing: border-box;
+			padding: 10px 0;
+		}
+	}
+}
+
+
+.responsive-container {
+	@include container;
+	padding: 60px 0 40px;
+	.responsive-description {
+		@include column(12);
+		h2 {
+			font-size: 2em;
+		}
+		p {
+			font-size: 1.2em;
+		}
+	}
+	
+	img {
+		@include column(12, true);
+	}
+}
+
+
+.portfolio-container {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	width: 100%;
+	position: relative;
+	h2 {
+		color: $base-color;
+	}
+	
+	.portfolio-item {
+		position: relative;
+		width: 33.33%;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		background: $dark-accent;
+		height: 300px;
+		overflow: hidden;
+		
+		img {
+			-webkit-transition: all .3s ease-in-out;
+			-moz-transition: all .3s ease-in-out;
+			-o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
+			max-width: 100%;
+			min-width: 100%;
+			min-height: 100%;
+		}
+	}
+}
+
+
