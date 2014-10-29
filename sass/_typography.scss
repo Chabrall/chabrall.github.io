@@ -19,6 +19,16 @@ a {
 	text-decoration: none;
 }
 
+::selection {
+	background: $accent-color;
+	color: #fff;
+}
+
+::-moz-selection {
+	background: $accent-color;
+	color: #fff;
+}
+
 html, body {
 	font: 1.2em/1.4em 'Lora', serif;
 	color: #828282;
@@ -29,7 +39,6 @@ html, body {
 	text-transform: uppercase;
 	letter-spacing: -4px;
 	color: #524E4D;
-	text-shadow: $text-shadow;
 }
 
 h1 {
