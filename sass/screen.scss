@@ -6,6 +6,17 @@ header {
 	background: url(../img/bg2.jpg);
 	background-size: cover;
 	background-attachment: fixed;
+
+	.hero-arrow {
+		position: absolute;
+		font-size: 3em;
+		color: #333;
+		left: 50%;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		bottom: 20px;
+	}
+
 	.welcome {
 		color: #fff;
 		text-align: center;
@@ -24,9 +35,40 @@ header {
 			background: $accent-color;
 		}
 		p {
+			padding: 10px 0;
 			font-size: 1.4em;
 			line-height: 1.5em;
 			text-shadow: $text-shadow;
+			width: auto;
+			span{
+				background: rgba(0,0,0,.8);
+				padding: 10px 25px;
+				border-radius: 1.5em;
+			}
+		}
+		.social-links {
+			margin-top: 20px;
+			li {
+				padding: 0 10px;
+				a {
+					color: #333;
+					text-shadow: none;
+				}
+				display: inline-block;
+				.genericon {
+					font-size: 2em;
+					border: 2px solid #fafafa;
+					background: #fafafa;
+					padding: 5px;
+					border-radius: 1.2em;
+					transition: all .2s ease-in-out;
+					&:hover {
+						background: $accent-color;
+						border-color: $accent-color;
+						color: #fff;
+					}
+				}
+			}
 		}
 	}
 	nav {
@@ -50,6 +92,8 @@ header {
 			padding: 0 20px;
 			color: #fff;
 			line-height: 2.1em;
+			transform: translateY(-50%);
+			-webkit-transform: translateY(-50%);
 			transition: all .2s ease-in-out;
 			&:hover {
 				border-color: $accent-color;
@@ -57,17 +101,6 @@ header {
 				cursor: pointer;
 			}
 		}
-	}
-	.hero-arrow {
-		position: absolute;
-		font-size: 3em;
-		color: #333;
-		text-align: center;
-		left: 50%;
-		transform: translateX(-50%);
-		bottom: 20px;
-		margin: 0;
-		padding: 0;
 	}
 }
 
@@ -181,6 +214,7 @@ header {
 			font-size: 1.4em;
 			line-height: 1.52em;
 			transform: translateX(-80px);
+			-webkit-transform: translateX(-80px);
 			opacity: 0;
 			transition: all .3s ease-in-out;
 		}
@@ -189,19 +223,9 @@ header {
 			.genericon {
 				opacity: 1;
 				transform: translateX(-50px);
+				-webkit-transform: translateX(-50px);
 
 			}
 		}
 	}
-}
-
-.wobble {
-	-webkit-animation: wobble 2s infinite;
-	transition: all ease-in-out;
-}
-
-@-webkit-keyframes wobble {
-	 0%  { -webkit-transform:  translateY(0); }
-  50%  { -webkit-transform:  translateY(10px); }
-  100%  { -webkit-transform:  translateY(0); }
 }
