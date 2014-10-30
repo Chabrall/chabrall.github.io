@@ -8,8 +8,8 @@ header {
 
 	.hero-arrow {
 		position: absolute;
-		font-size: 3em;
-		color: #333;
+		font-size: 3.4rem;
+		color: darken($text-color, 20%);
 		left: 50%;
 		transform: translateX(-50%);
 		-webkit-transform: translateX(-50%);
@@ -17,17 +17,16 @@ header {
 	}
 
 	.welcome {
-		color: #fff;
-		text-align: center;
 		@include clearfix;
-		position: relative;
 		display: block;
+		position: relative;
 		top: 50%;
+		color: $light-color;
+		text-align: center;
 		transform: translateY(-50%);
 		text-shadow: $text-shadow;
 		.hero {
-			font-size: 1.6em;
-			line-height: 1.3em;
+			font-size: 2.2rem;
 		}
 		.small-divider {
 			height: 6px;
@@ -37,38 +36,26 @@ header {
 			margin: 10px auto 20px;
 			background: $accent-color;
 		}
-		p {
-			padding: 10px 0;
-			font-size: 1.4em;
-			line-height: 1.5em;
-			text-shadow: $text-shadow;
-			width: auto;
-			span{
-				background: rgba(0,0,0,.8);
-				padding: 10px 25px;
-				border-radius: 1.5em;
-			}
-		}
 		.social-links {
 			margin-top: 20px;
 			li {
 				padding: 0 10px;
 				a {
-					color: #333;
+					color: $strong-text;
 					text-shadow: none;
 				}
 				display: inline-block;
 				.genericon {
-					font-size: 1.4em;
-					border: 2px solid #fafafa;
-					background: #fafafa;
-					padding: 5px;
-					border-radius: 1.2em;
+					font-size: 2.4rem;
+					border: 2px solid $light-color;
+					background: $light-color;
+					padding: .3em;
+					border-radius: 1em;
 					transition: all .2s ease-in-out;
 					&:hover {
 						background: $accent-color;
 						border-color: $accent-color;
-						color: #fff;
+						color: $light-color;
 					}
 				}
 			}
@@ -78,26 +65,26 @@ header {
 		position: fixed;
 		box-sizing: border-box;
 		width: 100%;
-		padding: 10px 20px;
+		padding: 1em;
 		z-index: 2;
 		transition: all .3s ease-in-out;
 		#{headings(all)} {
 			float: left;
-			color: #fff;
+			color: $light-color;
 		}
-		h3 {
-			font-size: 1.1em;
+		.logo-name {
+		 	font-size: 1.6rem;
 		}
 		a {
 			position: absolute;
 			float: right;
 			right: 10px;
 			font-weight: bold;
-			border: 2px solid #fff;
-			border-radius: 2.1em;
-			padding: 0 20px;
-			color: #fff;
-			line-height: 2.1em;
+			border: 2px solid $light-color;
+			border-radius: 2em;
+			padding: 0 10px;
+			color: $light-color;
+			line-height: 2em;
 			transform: translateY(-50%);
 			-webkit-transform: translateY(-50%);
 			transition: all .2s ease-in-out;
@@ -110,65 +97,36 @@ header {
 	}
 }
 
-#content {
-	background: #fefefe !important;
-	&:after {
-		content:" ";
-		display: block;
-		position: absolute;
-		top: -70px;
-		left: 70px;
-		height: 60px;
-		width: 60px;
-		background: #efefef;
-		z-index: 10;
-	}
-}
-
-.about-me {
-	box-sizing: border-box;
-	position: relative;
-	float: left;
-	width: 100%;
-	padding: 20px 0 40px;
-	background: #f3f3f3;
-}
-
-
 .services {
 	position: relative;
-	float: left;
 	width: 100%;
-	padding: 20px 0;
+	float: left;
+	padding: 1.6em 0;
 
 	h2, h3 {
-		padding: 10px 0;
+		padding: 1em 0 0;
 		word-break: break-word;
 	}
 
 	.service-container {
 		display: inline-block;
-		box-sizing: border-box;
-		@media screen and (min-width: 769px) {
-			width: 33.3%;
-			float: left;
-			h3 {
-				line-height: 1em;
-				height: 70px;
-			}
-		}
-		p {
-			text-align: left;
-		}
 	}
 }
 
-.portfolio-container {
-	padding: 50px 0 0;
-	margin: 0;
-	box-sizing: border-box;
-	width: 100%;
+.about-me {
+	@include clearfix;
 	position: relative;
+	float: left;
+	width: 100%;
+	padding: 2em 0;
+	background: #fafafd;
+	background: darken($light-color, 3%);
+}
+
+.portfolio-container {
+	@include clearfix;
+	width: 100%;
+	padding-top: 2em;
 
 	.portfolio-item {
 		position: relative;
@@ -193,22 +151,21 @@ header {
 .contact {
 	@include clearfix;
 	box-sizing: border-box;
-	padding: 40px 0;
-	width: 80%;
-	margin: 0 auto;
+	padding: 3em 10%;
 	text-align: center;
-	p {
-		padding-bottom: 40px;
-	}
+
 	.button {
+		display: inline-block;
+		font-size: 2rem;
 		line-height: 2em;
-		font-size: 1.4em;
-		color: $base-color;
+		margin-top: 1em;
+		color: $light-color;
 		background: $accent-color;
-		padding: 20px 40px;
+		padding: .4em 1.2em;
 		border-radius: 2em;
 		transition: all .3s ease-in-out;
 		overflow: hidden;
+
 		.genericon {
 			position: absolute;
 			font-size: 1.4em;
@@ -218,16 +175,86 @@ header {
 			opacity: 0;
 			transition: all .3s ease-in-out;
 		}
+
 		&:hover {
-			padding: 20px 40px 20px 70px;
+			padding: .4em 1.2em .4em 2.6em;
 			.genericon {
 				opacity: 1;
-				transform: translateX(-50px);
-				-webkit-transform: translateX(-50px);
-
+				transform: translateX(-40px);
+				-webkit-transform: translateX(-40px);
 			}
 		}
 	}
+}
+
+
+@media screen and (min-width: 551px) {
+	body { font-size: 1.8rem; }
+	h1 { font-size: 3.4rem; }
+	h2 { font-size: 2.6rem; }
+
+	header {
+		.welcome .hero { font-size: 3.4rem; }
+		nav .logo-name { font-size: 1.8rem ; }
+	}
+
+	footer { font-size: 1.8rem; }
+}
+
+@media screen and (min-width: 769px) {
+	.wrapper { padding: 0 2em; }
+
+	.service-container {
+		box-sizing: border-box;
+		width: 33.3%;
+		padding: 0 .5em;
+		float: left;
+	}
+
+	footer {
+		font-size: 2rem;
+		p {
+			text-align: left;
+			float: left;
+		}
+		.social-links {
+			margin: 0;
+			display: inline-block;
+			float: right;
+			font-size: 1.4em;
+			line-height: 1.4rem;
+			transform: translateY(-20%);
+		}
+	}
+}
+
+@media screen and (min-width: 900px) {
+	body { font-size: 2rem }
+	h1 { font-size: 4rem;	}
+	h2 { font-size: 3rem;	}
+
+	header {
+		.welcome .hero { font-size: 4rem; }
+		nav .logo-name { font-size: 2.2rem; }
+	}
+
+	.portfolio-item {
+		box-sizing: border-box;
+		width: 33.333%;
+		float: left;
+	}
+
+	footer { font-size: 2rem; }
+}
+
+@media screen and (min-width: 1080px) {
+	header {
+		.welcome .hero { font-size: 5.6rem; }
+	}
+	header .welcome .social-links li .genericon {
+		font-size: 3.2rem;
+	}
+	footer { p{ font-size: 2.2rem;} }
 }
 
 .bounce {
