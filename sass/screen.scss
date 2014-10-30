@@ -5,6 +5,7 @@ header {
 	background: url(../img/bg2.jpg);
 	background-size: cover;
 	background-attachment: fixed;
+	background-position: center center;
 
 	.hero-arrow {
 		position: absolute;
@@ -247,7 +248,7 @@ header {
 	footer { font-size: 2rem; }
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1024px) {
 	header {
 		.welcome .hero { font-size: 5.6rem; }
 	}
