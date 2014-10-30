@@ -1,12 +1,14 @@
 $(document).ready(function(){
+	var windowHeight = $(window).height();
 	var iOS = /(iPad|iPhone|iPod)/g.test( navigator.userAgent );
+
 	if(iOS)
 		$('header').css('background-attachment', 'scroll');
-	var windowHeight = $(window).height();
+
+	//Dimm nav background when reaching content and reverse
 	$(window).scroll(function(){
 		var scrollLength = $(window).scrollTop();
-		var navHeight = $('nav').height();
-		if(scrollLength >= windowHeight-navHeight)
+		if(scrollLength >= windowHeight-90)
 			$('nav').css('background', "rgba(0,0,0,.8)");
 		else
 			$('nav').css('background', "none");

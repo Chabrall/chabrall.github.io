@@ -145,14 +145,24 @@ header {
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
-		height: 300px;
+		height: 340px;
 		overflow: hidden;
+		background-position: center center !important;
+		background-repeat: no-repeat !important;
+		-webkit-background-size: cover !important;
+		-moz-background-size: cover !important;
+		-o-background-size: cover !important;
+		background-size: cover !important;
 
-		img {
-			max-width: 160%;
-			min-width: 100%;
-			min-height: 100%;
-		}
+		&:nth-child(1){background: url(../img/port/dribbble.jpg);}
+		&:nth-child(2){background: url(../img/port/travel-planner.jpg);}
+		&:nth-child(3){background: url(../img/port/arho.jpg);}
+		&:nth-child(4){background: url(../img/port/responsive.jpg);}
+		&:nth-child(5){background: url(../img/port/mail.jpg);}
+		&:nth-child(6){background: url(../img/port/spotify.jpg);}
+		&:nth-child(7){background: url(../img/port/spotifyios7.jpg);}
+		&:nth-child(8){background: url(../img/port/nasatlx.jpg);}
+		&:nth-child(9){background: url(../img/port/mrdiabetes.jpg);}
 
 		@media screen and (min-width: 900px) {
 			box-sizing: border-box;
