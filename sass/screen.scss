@@ -79,7 +79,7 @@ header {
 		position: fixed;
 		box-sizing: border-box;
 		width: 100%;
-		padding: 10px 30px;
+		padding: 10px 0;
 		z-index: 2;
 		transition: all .3s ease-in-out;
 		#{headings(all)} {
@@ -231,4 +231,15 @@ header {
 			}
 		}
 	}
+}
+
+.bounce {
+	-webkit-animation: bounce 4s infinite;
+}
+
+@-webkit-keyframes bounce {
+	0% { transform: translateY(0) translateX(-50%); }
+	20% { transform: translateY(-5px) translateX(-50%); }
+	50% { transform: translateY(15px) translateX(-50%); }
+	100% { transform: translateY(0) translateX(-50%); }
 }
