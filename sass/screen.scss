@@ -3,10 +3,10 @@
 
 html, body {
 	width: 100%;
+	overflow-x: hidden;
 }
 
 header {
-	@include clearfix;
 	background: url(../img/bg2.jpg);
 	background-size: cover;
 	background-attachment: fixed;
@@ -141,24 +141,22 @@ header {
 
 	h2, h3 {
 		padding: 10px 0;
+		word-break: break-word;
 	}
 
 	.service-container {
-		@include column(8);
 		display: inline-block;
 		box-sizing: border-box;
-		-webkit-transition: all .2s ease-in-out;
-		-moz-transition: all .2s ease-in-out;
-		-o-transition: all .2s ease-in-out;
-		transition: all .2s ease-in-out;
-		cursor: pointer;
-
-		&:last-child {
-			padding: 0;
+		padding: 0 20px;
+		@media screen and (min-width: 769px) {
+			width: 33.3%;
+			float: left;
+			h3 {
+				line-height: 1em;
+				height: 70px;
+			}
 		}
-
 		p {
-			box-sizing: border-box;
 			text-align: left;
 		}
 	}
@@ -239,7 +237,7 @@ header {
 
 @-webkit-keyframes bounce {
 	0% { transform: translateY(0) translateX(-50%); }
-	20% { transform: translateY(-5px) translateX(-50%); }
-	50% { transform: translateY(15px) translateX(-50%); }
+	20% { transform: translateY(-3px) translateX(-50%); }
+	50% { transform: translateY(10px) translateX(-50%); }
 	100% { transform: translateY(0) translateX(-50%); }
 }
