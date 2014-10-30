@@ -7,14 +7,17 @@ header {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	height: 100%;
+	width: 100%;
 
 	.hero-arrow {
 		position: absolute;
 		font-size: 3.4rem;
 		color: darken($text-color, 20%);
 		left: 50%;
-		transform: translateX(-50%);
 		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		transform: translateX(-50%);
 		bottom: 20px;
 	}
 
@@ -25,6 +28,8 @@ header {
 		top: 50%;
 		color: $light-color;
 		text-align: center;
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
 		transform: translateY(-50%);
 		text-shadow: $text-shadow;
 		.hero {
@@ -87,8 +92,9 @@ header {
 			padding: 0 10px;
 			color: $light-color;
 			line-height: 2em;
-			transform: translateY(-50%);
 			-webkit-transform: translateY(-50%);
+			-moz-transform: translateY(-50%);
+			transform: translateY(-50%);
 			transition: all .2s ease-in-out;
 			&:hover {
 				border-color: $accent-color;
@@ -121,7 +127,6 @@ header {
 	float: left;
 	width: 100%;
 	padding: 2em 0;
-	background: #fafafd;
 	background: darken($light-color, 3%);
 }
 
@@ -139,11 +144,7 @@ header {
 		overflow: hidden;
 
 		img {
-			-webkit-transition: all .3s ease-in-out;
-			-moz-transition: all .3s ease-in-out;
-			-o-transition: all .3s ease-in-out;
-			transition: all .3s ease-in-out;
-			max-width: 100%;
+			max-width: 160%;
 			min-width: 100%;
 			min-height: 100%;
 		}
@@ -172,8 +173,9 @@ header {
 			position: absolute;
 			font-size: 1.4em;
 			line-height: 1.52em;
-			transform: translateX(-80px);
 			-webkit-transform: translateX(-80px);
+			-moz-transform: translateX(-80px);
+			transform: translateX(-80px);
 			opacity: 0;
 			transition: all .3s ease-in-out;
 		}
@@ -182,8 +184,9 @@ header {
 			padding: .4em 1.2em .4em 2.6em;
 			.genericon {
 				opacity: 1;
-				transform: translateX(-40px);
 				-webkit-transform: translateX(-40px);
+				-moz-transform: translateX(-40px);
+				transform: translateX(-40px);
 			}
 		}
 	}
@@ -225,6 +228,8 @@ header {
 			float: right;
 			font-size: 1.4em;
 			line-height: 1.4rem;
+			-webkit-transform: translateY(-20%);
+			-moz-transform: translateY(-20%);
 			transform: translateY(-20%);
 		}
 	}
@@ -264,8 +269,8 @@ header {
 }
 
 @-webkit-keyframes bounce {
-	0% { transform: translateY(0) translateX(-50%); }
-	20% { transform: translateY(-3px) translateX(-50%); }
-	50% { transform: translateY(10px) translateX(-50%); }
-	100% { transform: translateY(0) translateX(-50%); }
+	0% { -webkit-transform: translateY(0) translateX(-50%); }
+	20% { -webkit-transform: translateY(-3px) translateX(-50%); }
+	50% { -webkit-transform: translateY(10px) translateX(-50%); }
+	100% { -webkit-transform: translateY(0) translateX(-50%); }
 }
