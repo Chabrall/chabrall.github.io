@@ -110,11 +110,20 @@ header {
 	}
 }
 
+.about-me {
+	@include clearfix;
+	position: relative;
+	float: left;
+	width: 100%;
+	padding: 2em 0;
+}
+
 .services {
 	position: relative;
 	width: 100%;
 	float: left;
 	padding: 1.6em 0;
+	background: darken($light-color, 3%);
 
 	h2, h3 {
 		padding: 1em 0 0;
@@ -126,14 +135,7 @@ header {
 	}
 }
 
-.about-me {
-	@include clearfix;
-	position: relative;
-	float: left;
-	width: 100%;
-	padding: 2em 0;
-	background: darken($light-color, 3%);
-}
+
 
 .portfolio-container {
 	@include clearfix;
@@ -164,7 +166,7 @@ header {
 		&:nth-child(8){background: url(../img/port/nasatlx.jpg);}
 		&:nth-child(9){background: url(../img/port/mrdiabetes.jpg);}
 
-		@media screen and (min-width: 900px) {
+		@media only screen and (min-device-width: 900px) {
 			box-sizing: border-box;
 			width: 33.333%;
 			float: left;
