@@ -1,4 +1,7 @@
 $(document).ready(function(){
+	var iOS = /(iPad|iPhone|iPod)/g.test( navigator.userAgent );
+	if(iOS)
+		$('header').css('background-attachment', 'scroll');
 	var windowHeight = $(window).height();
 	$(window).scroll(function(){
 		var scrollLength = $(window).scrollTop();

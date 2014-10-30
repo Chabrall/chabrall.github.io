@@ -3,13 +3,15 @@
 
 header {
 	display: block;
-	background: url(../img/bg2.jpg) no-repeat center center scroll;
+	background: url(../img/bg2.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 	min-height: 100%;
 	height: auto !important;
+
+
 
 	.hero-arrow {
 		position: absolute;
