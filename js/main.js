@@ -1,6 +1,5 @@
 $(document).ready(function(){
 	var windowHeight = $(window).height();
-	$('header').css('height', windowHeight);
 	$(window).scroll(function(){
 		var scrollLength = $(window).scrollTop();
 		var navHeight = $('nav').height();
