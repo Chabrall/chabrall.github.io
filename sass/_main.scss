@@ -62,10 +62,16 @@ img {
 }
 
 .wrapper {
+	box-sizing: border-box;
 	position: relative;
 	width: 100%;
 	max-width: 1140px;
 	margin: 0 auto;
+	padding: 0 10px;
+
+	@media screen and (min-width: 700px) {
+		padding: 0;
+	}
 }
 
 /****************************************
@@ -79,11 +85,13 @@ footer {
 	border-top: 1px solid #e3e9e9;
 	font-size: .8em;
 	color: lighten(#828282, 20%);
+	text-align: center;
 
 	.social-links {
-		float: right;
+		margin-top: 10px;
 		li {
 			a {
+				padding: 10px;
 				color: lighten(#828282, 20%);
 			}
 			display: inline-block;
