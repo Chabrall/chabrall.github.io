@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lora);
+@import url(http://fonts.googleapis.com/css?family=Alegreya);
 @font-face {
 		font-family: 'cocogoose';
 		src: url('../assets/fonts/cocogoose/cocogoose-webfont.eot');
@@ -12,14 +12,14 @@
 }
 
 html {
-	font-size: 62.5%;
+	font-size: 75%;
 	height: 100%;
 	width: 100%;
 }
 
 body {
 	position: relative;
-	font: 1.6rem/1.4em 'Lora', serif;
+	font: 1.6rem/1.4em 'Alegreya', serif;
 	color: $text-color;
 	height: 100%;
 	width: 100%;
