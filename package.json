@@ -1,0 +1,19 @@
+{
+  "name": "chabrall.github.io",
+  "version": "0.0.1",
+  "description": "my personal webpage",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Chabrall/chabrall.github.io.git"
+  },
+  "author": "David Andersson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chabrall/chabrall.github.io/issues"
+  },
+  "homepage": "https://github.com/Chabrall/chabrall.github.io"
+}
